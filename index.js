@@ -80,7 +80,9 @@ const addManager = () => {
 
 const addEmployee = () => {
     console.log(`
-    Adding employees to team
+    ========
+    Split section to add employees to team
+    =========
     `);
 
     return inquirer.prompt ([
