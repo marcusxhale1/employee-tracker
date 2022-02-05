@@ -1,30 +1,31 @@
-// Manager section 
-const generateManager = function (manager) {
+// creating Manager
+
+const createManager = function (manager) {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${manager.name}</h3>
-                <h4>Manager</h4><i class="material-icons">content_paste</i>
+                <h2>${manager.name}</h2>
+                <h3>Manager</h3><i class="material-icons">content_paste</i>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${manager.id}</p>
                 <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-                <p class="office">Office Number: ${manager.officeNumber}</p>
+                <p class="phone">Phone Number: ${manager.phoneNumber}</p>
             </div>
         </div>
     </div>
     `;
 }
 
-// Engineer section
-const generateEngineer = function (engineer) {
+// creating Engineer 
+const createEngineer = function (engineer) {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${engineer.name}</h3>
-                <h4>Engineer</h4><i class="material-icons">laptop_mac</i>
+                <h2>${engineer.name}</h2>
+                <h3>Engineer</h3><i class="material-icons">laptop_mac</i>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
@@ -36,14 +37,14 @@ const generateEngineer = function (engineer) {
     `
 }
 
-// Intern Secetion
-const generateIntern = function (intern) {
+// creating Intern
+const createIntern = function (intern) {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${intern.name}</h3>
-                <h4>Intern</h4><i class="material-icons">assignment_ind</i>
+                <h2>${intern.name}</h2>
+                <h3>Intern</h3><i class="material-icons">assignment_ind</i>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${intern.id}</p>
@@ -55,8 +56,8 @@ const generateIntern = function (intern) {
     `
 };
 
-// putting the array on the page
-generateHTML = (data) => {
+// push array to page 
+createHTML = (data) => {
 
     // array for cards 
     pageArray = []; 
@@ -68,21 +69,21 @@ generateHTML = (data) => {
 
         // call manager function
         if (role === 'Manager') {
-            const managerCard = generateManager(employee);
+            const managerCard = createManager(employee);
 
             pageArray.push(managerCard);
         }
 
         // call engineer function
         if (role === 'Engineer') {
-            const engineerCard = generateEngineer(employee);
+            const engineerCard = createEngineer(employee);
 
             pageArray.push(engineerCard);
         }
 
         // call intern function 
         if (role === 'Intern') {
-            const internCard = generateIntern(employee);
+            const internCard = createIntern(employee);
 
             pageArray.push(internCard);
         }
@@ -98,7 +99,7 @@ generateHTML = (data) => {
 
 }
 
-// generating HTML page 
+// generate html page 
 const generateTeamPage = function (employeeCards) {   
   return`
   <!DOCTYPE html>
@@ -133,8 +134,8 @@ const generateTeamPage = function (employeeCards) {
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </html>
-`;
+  `;
 }
 
 // export to index
-module.exports = generateHTML;
+module.exports = createHTML; 

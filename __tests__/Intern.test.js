@@ -1,6 +1,6 @@
-const Intern = require('../lib/Intern');
+const Intern = require('../library/Intern');
 
-// Intern as whole
+// Intern 
 test('Intern', () => {
     const intern = new Intern('Marcus', 29, 'marcusxhale1@gmail.com', 'UC Berekley');
     

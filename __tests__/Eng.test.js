@@ -1,8 +1,8 @@
 const Engineer = require('../lib/Engineer');
 
-// Engineer as a whole 
+// Engineer
 test('Engineer', () => {
-    const engineer = new Engineer('Marcus', 29, 'marcusxhale1@gmail.com', 'marcusxhale1');
+    const engineer = new Engineer('Marcus', 29, 'marcusxhale1@gmail', 'marcusxhale1');
     
     expect(engineer.github) .toEqual(expect.any(String));
 });
