@@ -56,10 +56,10 @@ const createIntern = function (intern) {
     `
 };
 
-// push array to page 
+// Creating HTML
 createHTML = (data) => {
 
-    // array for cards 
+    
     pageArray = []; 
 
     for (let i = 0; i < data.length; i++) {
@@ -67,21 +67,21 @@ createHTML = (data) => {
         const role = employee.getRole(); 
 
 
-        // call manager function
+        // Manager called
         if (role === 'Manager') {
             const managerCard = createManager(employee);
 
             pageArray.push(managerCard);
         }
 
-        // call engineer function
+        // Engineer called
         if (role === 'Engineer') {
             const engineerCard = createEngineer(employee);
 
             pageArray.push(engineerCard);
         }
 
-        // call intern function 
+        // Intern called 
         if (role === 'Intern') {
             const internCard = createIntern(employee);
 
@@ -90,16 +90,16 @@ createHTML = (data) => {
         
     }
 
-    // joining strings 
+     
     const employeeCards = pageArray.join('')
 
-    // return to generated page
+    // Update Generated Page 
     const generateTeam = generateTeamPage(employeeCards); 
     return generateTeam;
 
 }
 
-// generate html page 
+// Generate this paggeee
 const generateTeamPage = function (employeeCards) {   
   return`
   <!DOCTYPE html>
@@ -137,5 +137,5 @@ const generateTeamPage = function (employeeCards) {
   `;
 }
 
-// export to index
+
 module.exports = createHTML; 
