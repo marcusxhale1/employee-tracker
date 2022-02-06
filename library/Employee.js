@@ -4,21 +4,21 @@ class Employee{
         this.id = id; 
         this.email = email
     }
-    //Posting Name  
+    //Getting Name  
     getName() {
         return this.name;
     }
 
-    // Posting ID 
+    // Getting ID 
     getID() {
         return this.id
     }
-    // Posting Email 
+    // Getting Email 
     getEmail() {
         return this.email
     }
 
-    //Putting it all together
+    //Getting Role
     getRole() {
         return 'Employee';
     }

@@ -1,6 +1,6 @@
 const Employee = require("../library/Employee");
 
-// Object created
+// Employee created
 test('Employee', () => {
     const employee = new Employee('Marcus', 29, 'marcusxhale1@gmail.com');
 
